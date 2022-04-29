@@ -20,7 +20,16 @@
     "build": "tsc",
     "dev": "ts-node-dev --respawn --transpile-only src/index.ts"
   },
-  "author": "",
+  "author": "Efraim Cancio",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EfraimCancio/REST-API-TypeScript.git"
+  },
+  "bugs": {
+    "url": "https://github.com/EfraimCancio/REST-API-TypeScript/issues"
+  },
+  "homepage": "https://github.com/EfraimCancio/REST-API-TypeScript#readme",
+  "keywords": [],
   "description": ""
 }
