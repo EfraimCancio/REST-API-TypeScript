@@ -3,9 +3,8 @@ import sqlite3 from "sqlite3";
 
 const DATABASE_FILE = process.env.DATABASE_FILE;
 
-
 if (!DATABASE_FILE)
-    throw new Error("DATABASE_FILE não informado");
+    throw new Error("DATABASE_FILE uninformed");
 
 export const openConnection = () => {
     let db = new sqlite3.Database(DATABASE_FILE);
@@ -26,3 +25,13 @@ export const dbQuery = (query: string, params?: any[]) => {
         db.close();
     })
 }
+
+
+/**
+ *    Document purposes
+ *  1 - Management the app's connection to the database
+ * 
+ */
+
+//Porque o SQlite?
+//Qual a definição de promisse?
