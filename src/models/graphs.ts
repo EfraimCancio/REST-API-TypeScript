@@ -6,7 +6,7 @@ export type Graphs = {
 }
 
 export const insertGraph = async (graphs : Graphs) => {
-    await dbQuery(`INSERT INTO graphs (graph) values(?)`, [graphs.graph])
+    await dbQuery(`INSERT INTO graphs (graph) values(?)`, [JSON.stringify(graphs.graph)])
     let retur  = await dbQuery(`SELECT seq AS Id FROM sqlite_sequence WHERE name = 'graph'`)
     return retur[0].Id as number | undefined;
 }
